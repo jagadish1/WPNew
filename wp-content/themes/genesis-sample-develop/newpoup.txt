@@ -1,0 +1,21 @@
+popup
+<?php 
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+if ($_POST['validate']=="1")
+    {   
+    ?>
+<script type="text/javascript">
+window.location = "http://192.168.42.128/WPNew/select-immigration-alerts/";
+</script>      
+    <?php
+    }
+}
+?>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="popup">
+<input type="hidden" name="validate" value="1">
+<input type="hidden" name="fname" value="<?php $_POST["Full Name"]?>">
+<input type="hidden" name="Email1" value="<?php $_POST["Email"]?>">
+<input name="Full Name" type="text" />
+<input name="Email" type="text" />
+<input name="submit" type="submit" value="Submit" /></form>
