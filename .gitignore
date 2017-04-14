@@ -1,0 +1,6 @@
+/shared
+/local-config.php
+/sql-dump-*.sql
+/db-sync
+/wp-content/upload
+.DS_Store
